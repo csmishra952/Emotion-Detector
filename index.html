@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Recognition Mirror</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Recognition Mirror</h1>
+        <div class="video-container">
+            <video id="video" width="720" height="560" autoplay muted></video>
+            <canvas id="overlay" width="720" height="560"></canvas>
+        </div>
+        <div id="emotion">Detecting emotion...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
