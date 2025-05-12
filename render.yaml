@@ -1,5 +1,17 @@
 services:
   - type: web
-    name: Emotion-Detector
-    env: static
-    static_publish_path: static
+    name: emotion-detector
+    env: python
+    plan: free
+    branch: main
+    repo: https://github.com/csmishra952/Emotion-Detector
+    buildCommand: |
+      pip install -r requirements.txt gunicorn
+      # Add commands to download models, e.g.:
+      # python -m scripts.download_model
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
+      - key: PORT
+        sync: false
