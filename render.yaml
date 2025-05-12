@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: Emotion-Detector
+    env: static
+    static_publish_path: static
